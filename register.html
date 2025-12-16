@@ -1,0 +1,72 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Register</title>
+<style>
+body{
+  margin:0;
+  height:100vh;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  background: linear-gradient(135deg, white, #d9d9d9);
+}
+.container{
+  background: linear-gradient(135deg, orange, red);
+  padding:60px;
+  border-radius:25px;
+  animation: glow 3s infinite alternate;
+}
+@keyframes glow{
+  from{ box-shadow:0 0 15px orange;}
+  to{ box-shadow:0 0 35px red;}
+}
+input{
+  display:block;
+  margin:15px 0;
+  padding:15px;
+  width:260px;
+  font-size:18px;
+  border:none;
+  border-radius:10px;
+}
+button{
+  padding:15px 30px;
+  font-size:18px;
+  border:none;
+  border-radius:10px;
+  cursor:pointer;
+  background:black;
+  color:white;
+}
+a{color:white; font-size:16px;}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <h2>Register</h2>
+  <form onsubmit="registerUser(); return false;">
+    <input id="reg_user" type="text" placeholder="Create Username" required />
+    <input id="reg_pass" type="password" placeholder="Create Password" required />
+    <button type="submit">Register</button>
+  </form>
+  <a href="index.html">Already have an account? Login</a>
+</div>
+
+<script>
+function registerUser(){
+    const u = document.getElementById("reg_user").value;
+    const p = document.getElementById("reg_pass").value;
+
+    localStorage.setItem("user", u);
+    localStorage.setItem("pass", p);
+    alert("Registered successfully!");
+    window.location.href = "index.html";
+}
+</script>
+
+</body>
+</html>
