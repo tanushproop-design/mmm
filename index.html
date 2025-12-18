@@ -1,76 +1,13 @@
-
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="UTF-8" />
-<title>Login</title>
-<style>
-body{
-  margin:0;
-  height:100vh;
-  display:flex;
-  justify-content:center;
-  align-items:center;
-  background: linear-gradient(135deg, black, #d9d9d9);
-}
-.container{
-  background: linear-gradient(135deg, purple, red);
-  padding:60px;
-  border-radius:25px;
-  animation: glow 3s infinite alternate;
-}
-@keyframes glow{
-  from{ box-shadow:0 0 15px  purple;}
-  to{ box-shadow:0 0 35px red;}
-}
-input{
-  display:block;
-  margin:15px 0;
-  padding:15px;
-  width:260px;
-  font-size:18px;
-  border:none;
-  border-radius:10px;
-}
-button{
-  padding:15px 30px;
-  font-size:18px;
-  border:none;
-  border-radius:10px;
-  cursor:pointer;
-  background:black;
-  color:white;
-}
-a{color:black; font-size:16px;}
-</style>
+  <title>My Anime Site</title>
 </head>
 <body>
 
-<div class="container">
-  <h2>Login</h2>
-  <form onsubmit="return loginUser()">
-    <input id="login_user" type="text" placeholder="Username" required />
-    <input id="login_pass" type="password" placeholder="Password" required />
-    <button type="submit">Login</button>
-  </form>
-  <a href="register.html">Create new account</a>
-</div>
+<h2>Episode 1</h2>
 
-<script>
-function loginUser(){
-    const u = document.getElementById("login_user").value;
-    const p = document.getElementById("login_pass").value;
-
-    if(u === localStorage.getItem("user") && p === localStorage.getItem("pass")){
-        window.location.href = "redirect.html";
-        return false;
-    }
-    else{
-        alert("Wrong username or password!");
-        return false;
-    }
-}
-</script>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/eKuGddt9_9I?si=-nc_yYVxcuvw7Psw" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
 
 </body>
 </html>
